@@ -7,6 +7,8 @@ import { HeaderComponent } from './header/header.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { ActionHeaderComponent } from './action-header/action-header.component';
 import { PropertiesComponent } from './properties/properties.component';
+import { AppRoutingModule } from './app-routing.module';
+import { PublicationsComponent } from './publications/publications.component';
 
 
 @NgModule({
@@ -15,10 +17,12 @@ import { PropertiesComponent } from './properties/properties.component';
     HeaderComponent,
     SidebarComponent,
     ActionHeaderComponent,
-    PropertiesComponent
+    PropertiesComponent,
+    PublicationsComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
