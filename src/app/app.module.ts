@@ -9,6 +9,9 @@ import { ActionHeaderComponent } from './action-header/action-header.component';
 import { PropertiesComponent } from './properties/properties.component';
 import { AppRoutingModule } from './app-routing.module';
 import { PublicationsComponent } from './publications/publications.component';
+import { ListingComponent } from './properties/listing/listing.component';
+import { NewListingComponent } from './properties/new-listing/new-listing.component';
+import { ListItemComponent } from './properties/listing/list-item/list-item.component';
 
 
 @NgModule({
@@ -18,7 +21,10 @@ import { PublicationsComponent } from './publications/publications.component';
     SidebarComponent,
     ActionHeaderComponent,
     PropertiesComponent,
-    PublicationsComponent
+    PublicationsComponent,
+    ListingComponent,
+    NewListingComponent,
+    ListItemComponent
   ],
   imports: [
     BrowserModule,
