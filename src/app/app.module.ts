@@ -12,7 +12,9 @@ import { PublicationsComponent } from './publications/publications.component';
 import { ListingComponent } from './properties/listing/listing.component';
 import { NewListingComponent } from './properties/new-listing/new-listing.component';
 import { ListItemComponent } from './properties/listing/list-item/list-item.component';
-
+import { PropertyService } from './services/property.service';
+import { RestService } from './services/rest.service';
+import { AuthService } from './services/auth.service';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,7 @@ import { ListItemComponent } from './properties/listing/list-item/list-item.comp
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [PropertyService, AuthService, RestService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
