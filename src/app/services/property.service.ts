@@ -22,11 +22,11 @@ export class PropertyService {
 
   public loadProperties(): Promise<Property[]> {
     let headers = new Headers({ 'Content-Type': 'application/json' });
-    let token = this.authService.currentUser().getToken();
-    headers.append(this.authHeader, token);
+    // let token = this.authService.currentUser.refreshToken;
+    // headers.append(this.authHeader, token);
 
 
-    return this.http.get(environment.hostUrl + "property", { headers })
+    return this.http.get(environment.hostUrl + "/property", { headers })
       .toPromise()
       .then(this.extractData)
       .catch(this.handleError);
@@ -37,7 +37,7 @@ export class PropertyService {
       throw new Error('Bad response status: ' + res.status);
     }
     let body = res.json();
-    return body.items || { };
+    return body.Items || { };
   }
 
   handleError (error: any) {

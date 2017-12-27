@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-action-header',
@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./action-header.component.css']
 })
 export class ActionHeaderComponent implements OnInit {
+
+  @Input('url') url: string;
+  @Input('action') action: string;
 
   constructor() { }
 

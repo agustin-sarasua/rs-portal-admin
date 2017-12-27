@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Property } from './../../model/property'
+import { PropertyService } from './../../services/property.service'
 
 @Component({
   selector: 'app-listing',
@@ -7,7 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListingComponent implements OnInit {
 
-  constructor() { }
+  properties: Property[] = [];
+
+  constructor(private _propertyService: PropertyService) { 
+    this._propertyService.loadProperties().then(properties => this.properties = properties);
+  }
 
   ngOnInit() {
   }

@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+import { environment } from '../environments/environment';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -15,6 +17,7 @@ import { ListItemComponent } from './properties/listing/list-item/list-item.comp
 import { PropertyService } from './services/property.service';
 import { RestService } from './services/rest.service';
 import { AuthService } from './services/auth.service';
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -30,7 +33,10 @@ import { AuthService } from './services/auth.service';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
+    HttpModule
   ],
   providers: [PropertyService, AuthService, RestService],
   bootstrap: [AppComponent]
