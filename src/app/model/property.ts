@@ -1,32 +1,34 @@
+import {Address} from './address'
+
 export class Property {
-    public id: number;
-    public description: string;
-    public type: string;
-    public orientation: string;
-    public state: number;
-    public bedroms: number;
-    public bedromsSizes: string;
-    public kitchens: number;
-    public kitchenSizes: string;
-    public livingroomSize: number;
-    public courtyardSize: number;
-    public bathrooms: number;
-    public size: number;
-    public constructionYear: number;
-    public constructionSize: number;
-    public padron: string;
-    public buildingName: string;
-    public address: string;
-    public addressID: number;
-    public apartmentsPerFloor: number;
-    public floors: number;
-    public terraceSize: string; //fix
-    public baclonySize: string;//fix
-    public showers: number;
-    public expenses: number;
-    public amenities: string;
-    public createdAt: string; // fix
-    public propertyState: string; // fix
-    public elevators: number;
-    public garageSize: number;
+    public ID: number;
+    public Description: string;
+    public Type: string;
+    public Orientation: string;
+    public State: number;
+    public Bedroms: number;
+    public BedromsSizes: string;
+    public Kitchens: number;
+    public KitchenSizes: string;
+    public LivingroomSize: number;
+    public CourtyardSize: number;
+    public Bathrooms: number;
+    public Size: number;
+    public ConstructionYear: number;
+    public ConstructionSize: number;
+    public Padron: string;
+    public BuildingName: string;
+    public Address: Address;
+    public AddressID: number;
+    public ApartmentsPerFloor: number;
+    public Floors: number;
+    public TerraceSize: string; //fix
+    public BaclonySize: string;//fix
+    public Showers: number;
+    public Expenses: number;
+    public Amenities: string;
+    public CreatedAt: string; // fix
+    public PropertyState: string; // fix
+    public Elevators: number;
+    public GarageSize: number;
 }

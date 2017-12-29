@@ -18,6 +18,9 @@ import { PropertyService } from './services/property.service';
 import { RestService } from './services/rest.service';
 import { AuthService } from './services/auth.service';
 import { HttpModule } from '@angular/http';
+import { LocationComponent } from './properties/new-listing/location/location.component';
+
+import { FormsModule }   from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -29,14 +32,16 @@ import { HttpModule } from '@angular/http';
     PublicationsComponent,
     ListingComponent,
     NewListingComponent,
-    ListItemComponent
+    ListItemComponent,
+    LocationComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
-    HttpModule
+    HttpModule,
+    FormsModule
   ],
   providers: [PropertyService, AuthService, RestService],
   bootstrap: [AppComponent]
